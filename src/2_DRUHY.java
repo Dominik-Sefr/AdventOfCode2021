@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class BFirst {
+class Part_1_2 {
     public static void main(String[] args) {
-        String fileName = "Files/BFirst.txt";
+        String fileName = "Files/B.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -41,9 +41,9 @@ class BFirst {
         System.out.println(pos*depth);
     }
 }
-class BSecond{
+class Part_2_2 {
     public static void main(String[] args) {
-        String fileName = "Files/BSecond.txt";
+        String fileName = "Files/B.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());

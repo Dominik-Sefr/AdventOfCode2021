@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class AFirst {
+class Part_1_1 {
     static void main(String[] args) {
-        String fileName = "Files/AFirst.txt";
+        String fileName = "Files/A.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -32,9 +32,9 @@ class AFirst {
         System.out.println(counter);
     }
 }
-class ASecond {
+class Part_2_1 {
     public static void main(String[] args) {
-        String fileName = "Files/ASecond.txt";
+        String fileName = "Files/A.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
