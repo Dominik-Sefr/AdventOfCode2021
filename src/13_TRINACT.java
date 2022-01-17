@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 class Part_1_13 {
     public static void main(String[] args) {
-        String fileName = "Files/N.txt";
+        String fileName = "Files/13.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -116,7 +116,7 @@ class Part_1_13 {
 }
 class Part_2_13 {
     public static void main(String[] args) {
-        String fileName = "Files/N.txt";
+        String fileName = "Files/13.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());

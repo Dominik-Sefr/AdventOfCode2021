@@ -29,7 +29,7 @@ class Octopus{
 
 class Part_1_11{
     public static void main(String[] args) {
-        String fileName = "Files/J.txt";
+        String fileName = "Files/11.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -92,7 +92,7 @@ class Part_1_11{
 }
 class Part_2_11{
     public static void main(String[] args) {
-        String fileName = "Files/J.txt";
+        String fileName = "Files/11.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());

@@ -40,7 +40,7 @@ class Cave{
 class Part_1_12 {
     static List<String> cesty = new ArrayList<>();
     public static void main(String[] args) {
-        String fileName = "Files/M.txt";
+        String fileName = "Files/12.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -136,7 +136,7 @@ class CaveTwice{
 class Part_2_12 {
     static List<String> cesty = new ArrayList<>();
     public static void main(String[] args) {
-        String fileName = "Files/M.txt";
+        String fileName = "Files/12.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());

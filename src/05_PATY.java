@@ -11,7 +11,7 @@ import static java.util.Arrays.stream;
 
 class Part_1_5 {
     public static void main(String[] args) {
-        String fileName = "Files/E.txt";
+        String fileName = "Files/05.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -75,7 +75,7 @@ class Part_1_5 {
 }
 class Part_2_5 {
     public static void main(String[] args) {
-        String fileName = "Files/E.txt";
+        String fileName = "Files/05.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());

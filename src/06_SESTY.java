@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 class Part_1_6 {
     public static void main(String[] args) {
-        String fileName = "Files/F.txt";
+        String fileName = "Files/06.txt";
         List<String> linescopy = new ArrayList<String>();
         try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
@@ -39,7 +39,7 @@ class Part_1_6 {
 }
 class Part_2_6{
     public static void main(String[] args) {
-        String fileName = "Files/F.txt";
+        String fileName = "Files/06.txt";
         List<String> linescopy = new ArrayList<String>();
             try (Stream<String> result = Files.lines(Paths.get(fileName))) {
             linescopy = result.collect(Collectors.toList());
