@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -88,7 +89,7 @@ class Part_2_10 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        List<Integer> missing = new ArrayList<Integer>();
+        List<Long> missing = new ArrayList<Long>();
         List<Integer> remove = new ArrayList<Integer>();
         for(int row = 0; row < linescopy.size(); row++){
             List<Character> expected = new ArrayList<Character>();
@@ -142,16 +143,16 @@ class Part_2_10 {
             for(int j = 0; j < remove.size(); j++) {
                 if(i == remove.get(j)){
                     add = false;
-                    break;
                 }
             }
             if(add){
                 lines.add(linescopy.get(i));
             }
         }
-
         for(int row = 0; row < lines.size(); row++){
             List<Character> missingchars = new ArrayList<Character>();
+            System.out.println(missingchars.size());
+            System.out.println(lines.get(row));
             for(int character = 0; character < lines.get(row).length(); character++){
                 if(lines.get(row).charAt(character) == '(' || lines.get(row).charAt(character) == '[' || lines.get(row).charAt(character) == '{' || lines.get(row).charAt(character) == '<'){
                     missingchars.add(lines.get(row).charAt(character));
@@ -179,8 +180,10 @@ class Part_2_10 {
                     }
                 }
             }
-            int result = 0;
-            for(int i = missingchars.size()-1; i >= 0; i--){
+            System.out.println(missingchars);
+            Collections.reverse(missingchars);
+            long result = 0;
+            for(int i = 0; i < missingchars.size(); i++){
                 result *= 5;
                 if(missingchars.get(i) == '('){
                     result += 1;
@@ -197,8 +200,9 @@ class Part_2_10 {
             }
             missing.add(result);
         }
-        List<Integer> sorted = missing.stream().sorted().collect(Collectors.toList());
-        int vysledek = sorted.get(sorted.size()/2);
+        List<Long> sorted = missing.stream().sorted().collect(Collectors.toList());
+        Long vysledek = sorted.get(sorted.size()/2);
+        System.out.println(sorted);
         System.out.println(vysledek);
     }
 }
